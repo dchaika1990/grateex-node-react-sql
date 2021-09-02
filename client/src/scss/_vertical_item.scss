@@ -1,0 +1,35 @@
+.vertical-item{
+  .item-media{
+    height: 300px;
+    overflow: hidden;
+    img{
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+    }
+  }
+  .item-content{
+    padding: 20px 15px;
+    h5{
+      text-transform: capitalize;
+    }
+  }
+  &.layout2 .item-content{
+    flex-direction: row !important;
+    padding: 40px;
+    .item_header{
+      width: 250px;
+      margin-right: 30px;
+    }
+    .item_body{
+
+    }
+    .item_footer{
+      width: 250px;
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+}

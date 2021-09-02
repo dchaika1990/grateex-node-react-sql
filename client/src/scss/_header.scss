@@ -1,0 +1,33 @@
+.page_header{
+  .navbar-brand{
+    & + .btn{
+      margin-left: 35px;
+      @media(max-width: 1200px){
+        max-width: 170px;
+        margin-left: 10px;
+      }
+    }
+  }
+  .navbar{
+    .nav-link{
+      font-size: 14px;
+      color: $fontColor;
+      padding: 20px 0;
+      & + .nav-link{
+        margin-left: 30px;
+        @media (max-width: 991px) {
+          margin-left: 0;
+        }
+      }
+      &:hover{
+        color: $darkColor;
+      }
+    }
+    .dropdown, .buttons-wrap{
+      margin-left: 50px;
+      @media (max-width: 991px) {
+        margin-left: 0;
+      }
+    }
+  }
+}

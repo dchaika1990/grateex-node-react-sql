@@ -1,0 +1,15 @@
+.rdw-editor-wrapper{
+   border: 1px solid #ced4da;
+   border-radius: 3px;
+
+   .rdw-editor-toolbar{
+      margin-bottom: 0;
+   }
+
+   .rdw-editor-main{
+      padding: 0 15px;
+      border-top: 1px solid #ced4da;
+      background-color: $lightColor;
+      min-height: 150px;
+   }
+}

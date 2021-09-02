@@ -1,0 +1,210 @@
+/*
+   admin-panel
+*/
+
+.admin-panel {
+   display: flex;
+}
+
+.products-list {
+   padding-left: 0;
+   list-style: none;
+}
+
+.product-item {
+   border: 1px solid $fontColor;
+   padding: 30px;
+   display: flex;
+   align-items: center;
+
+   .item-media {
+
+   }
+
+   .item-content {
+      margin-top: 50px;
+      @media (min-width: 768px) {
+         margin-top: 0;
+         padding-left: 60px;
+      }
+   }
+
+   + .product-item {
+      margin-top: 60px;
+   }
+}
+
+#main {
+   display: flex;
+   flex-shrink: 1;
+   flex-grow: 1;
+   flex-direction: column;
+}
+
+.is-invalid {
+   .jodit-container {
+      border-color: #dc3545;
+   }
+}
+
+.react-dropdown-tree-select .dropdown .dropdown-trigger {
+   border-radius: 3px;
+   border-color: #ced4da;
+
+   &.arrow {
+      &.bottom:after {
+         content: "\f078";
+         font-family: 'FontAwesome';
+         font-size: 11px;
+      }
+
+      &.top:after {
+         content: "\f077";
+         font-family: 'FontAwesome';
+         font-size: 11px;
+      }
+   }
+}
+
+.table {
+   tbody {
+      font-size: 14px;
+
+      img {
+         max-width: 80px;
+         max-height: 80px;
+      }
+   }
+
+   .max-width-300 {
+      width: 300px;
+   }
+}
+
+.refund {
+   color: red;
+}
+
+.table {
+   [class*="status-"] {
+      border-left-width: 3px;
+   }
+
+   .status-draft {
+
+   }
+
+   .status-pending {
+      border-left-color: orange;
+   }
+
+   .status-approved {
+      border-left-color: $colorMain;
+   }
+
+   .status-reject {
+      border-left-color: red;
+   }
+}
+
+.table.users_table {
+   .actions {
+      width: 300px;
+   }
+
+   .date {
+      width: 100px;
+   }
+
+   .pending, .approved {
+      display: inline-block;
+      margin-right: 5px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: green;
+   }
+
+   .pending {
+      background: red;
+   }
+
+   .btn {
+      min-width: 101px;
+      text-transform: capitalize;
+      width: auto;
+      height: auto;
+      padding: 10px 12px;
+   }
+}
+
+.react-datepicker-wrapper {
+   width: 100%;
+
+   input {
+      width: 100%;
+   }
+}
+
+@for $i from 1 through 10 {
+   .lvl-#{$i} {
+      td:nth-child(1) {
+         padding-left: calc(40px * #{$i} - 10px * #{$i});
+      }
+   }
+}
+
+.category-table.table {
+   .btn {
+      width: auto;
+   }
+}
+
+.author {
+   display: flex;
+   align-items: center;
+
+   &-img {
+      max-width: 80px;
+
+      img {
+         border-radius: 50%;
+      }
+   }
+}
+
+.table_purchases.table {
+   .btn {
+      width: auto;
+   }
+}
+
+.custom-select {
+   position: relative;
+   &-input {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background-color: $lightColor;
+      padding: 10px;
+      border: 1px solid $fontColor;
+      border-radius: 5px;
+      z-index: 10;
+   }
+   &-options{
+      display: flex;
+      flex-direction: column;
+      overflow: auto;
+      max-height: 150px;
+
+      span{
+         padding: 5px 10px;
+         &:hover{
+            cursor: pointer;
+            color: $lightColor;
+            background-color: $fontColor;
+         }
+      }
+   }
+}

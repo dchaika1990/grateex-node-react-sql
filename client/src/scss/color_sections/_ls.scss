@@ -1,0 +1,12 @@
+.ls {
+   background: $lightColor;
+   color: $fontColor;
+
+   h1, h2, h3, h4, h5, h6 {
+      color: $darkColor;
+   }
+
+   .color-main {
+      color: $colorMain;
+   }
+}

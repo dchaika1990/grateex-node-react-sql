@@ -1,0 +1,124 @@
+/*
+** General Styles for HTML tags
+*/
+html {
+   width: 100%;
+   height: 100%;
+   position: relative;
+   overflow: visible;
+}
+
+*:focus{
+   outline: none!important;
+   box-shadow: none!important;
+}
+
+::selection {
+   color: $lightColor;
+   background-color: $colorMain;
+}
+
+::-moz-selection {
+   color: $lightColor;
+   background-color: $colorMain;
+}
+
+a {
+   text-decoration: none;
+   color: $darkColor;
+
+   &:hover {
+      transition: all .3s ease-in-out;
+      color: $fontColor;
+   }
+}
+
+a[href*='tel'] {
+   white-space: nowrap;
+}
+
+body {
+   font-family: 'Roboto', sans-serif;
+   font-size: 16px;
+   font-weight: 400;
+   line-height: 30px;
+   background-color: $bodyColor;
+   overflow: visible;
+   overflow-x: hidden;
+   //for scrollbar always seen
+   overflow-y: scroll;
+   //for scrollspy
+   position: relative;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   line-height: 1.4;
+   word-break: break-word;
+}
+
+p {
+   margin-bottom: .8em;
+}
+
+ul:last-child,
+ol:last-child,
+p:last-child {
+   margin-bottom: 0;
+}
+
+p:last-child {
+   &:after {
+      content: '';
+      display: block;
+      clear: both;
+   }
+}
+
+img, figure {
+   max-width: 100%;
+   height: auto;
+}
+
+img{
+   width: 100%;
+}
+
+figcaption {
+   p {
+      margin-bottom: 0;
+   }
+
+   font-size: 0.95em;
+   line-height: 1.4;
+   padding: 10px 0 7px;
+}
+
+b, strong {
+   font-weight: 700;
+}
+
+#root{
+   height: 100vh;
+}
+
+.messageWrapper{
+   position: fixed;
+   opacity: 0;
+   right: 0;
+   top: 20px;
+   transform: translate(10vw);
+   transition: all 0.5s ease-in-out;
+   &.show {
+      opacity: 1;
+      transform: translate(-10px);
+   }
+}
+
+.form-check-inline{
+   display: flex;
+}
